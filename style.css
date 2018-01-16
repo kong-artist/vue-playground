@@ -1,0 +1,11 @@
+html, body, #app {
+    display: flex;
+}
+
+#app {
+    flex-direction: column;
+}
+
+.centered {
+    text-align: center;
+}
