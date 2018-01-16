@@ -1,11 +1,23 @@
-html, body, #app {
+html, body, #app, div {
     display: flex;
 }
 
-#app {
+#app, div {
     flex-direction: column;
+}
+
+ul {
+    list-style: none;
 }
 
 .centered {
     text-align: center;
+}
+
+.completed {
+    color: blue;
+}
+
+.todo {
+    color: red;
 }

@@ -1,23 +1,20 @@
-<script src="https://unpkg.com/vue"></script>
+ 
+<head>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<style>
-</style>
+<body>
+  <div id="app">
+    <div class="centered">{{ title }}</div>
+    <ul>
+      <todo-item v-for="(todo, idx) in todos" :item ="{todo:todo, idx: idx}"
+       :key="idx" @delete-todo="deleteTodo"></todo-item>
+    </ul>
+    <todo-controls :todos = "todos" @delete-completed="deleteCompleted"></todo-controls>
+  </div>
+</body>
 
-<div id="app">
-<div class="centered">{{ title }}</div>
-<button v-on:click="exclaim">Add exclamation</button>
-</div>
-
-<script>
-let app = new Vue({
-  el: '#app',
-  data: {
-    title: "Hello World!",
-  },
-  methods: {
-    exclaim: function() {
-      this.title = this.title + "!";
-    },
-  },
-});
-</script>
+<footer>
+  <script src="main.js"> </script>
+</footer>
